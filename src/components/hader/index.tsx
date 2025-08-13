@@ -6,7 +6,9 @@ const Header = () => {
     <header className="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 shadow-lg">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <h1 className="text-white text-2xl font-bold tracking-wide">
-          My<span className="text-yellow-300">Shop</span>
+          <NavLink to={'/'}>
+            My<span className="text-yellow-300">Shop</span>
+          </NavLink>
         </h1>
 
         <nav className="flex gap-6">

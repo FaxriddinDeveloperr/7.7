@@ -24,7 +24,7 @@ const Shop = () => {
     if (inx === 0) {
       params.delete('skip');
     } else {
-      params.set('skip', inx.toString());
+      params.set('skip', (inx + 1).toString());
     }
     setParam(params);
   };
@@ -37,7 +37,7 @@ const Shop = () => {
 
   return (
     <div className="Index container mx-auto p-6">
-      <div className="flex gap-3 overflow-x-auto pb-4">
+      <div className="flex gap-3 overflow-x-auto pb-4 shop">
         <button
           onClick={() => handlerCategory('')}
           className={`px-5 py-2 rounded-full font-medium transition ${
@@ -75,7 +75,7 @@ const Shop = () => {
               key={inx}
               onClick={() => handlerPaginate(inx)}
               className={`px-3 py-1 rounded-md border transition ${
-                skip === (inx + 1)
+                skip === inx + 1
                   ? 'bg-black text-white border-black'
                   : 'hover:bg-gray-200 border-gray-300'
               }`}
